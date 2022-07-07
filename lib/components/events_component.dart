@@ -45,7 +45,7 @@ class _EventsComponentState extends State<EventsComponent> {
   Future<List<Event>> fetchEvents() async {
     logger.info("about to call ${application.gatewayUrl}/api/events/${widget.country}/${widget.city}");
 
-    final response = await http.get(Uri.parse('${application.gatewayUrl}/api/events'));
+    final response = await http.get(Uri.parse('${application.gatewayUrl}/api/events/${widget.country}/${widget.city}'));
 
     logger.info("response ${response.statusCode}");
 

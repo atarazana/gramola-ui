@@ -10,7 +10,7 @@ final logger = Logger('RoutesHandlers');
 var rootHandler = Handler(
     handlerFunc: (BuildContext? context, Map<String, List<String>> params) {
   logger.fine("rootHandler");
-  return LoginComponent();
+  return const LoginComponent();
 });
 
 var configHandler = Handler(
